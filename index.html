@@ -6,6 +6,13 @@
     <title>Learn JQuery</title>
   </head>
   <body>
+    <tbody id="content">
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+    </tbody>
     <h1 id="contoh1">satu</h1>
     <h1 class="contoh2">dua</h1>
     <button id="button-example">klik aku</button>
@@ -38,51 +45,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script>
-      //! SAFETY MANIPULATION
-      $(document).ready(() => {
-        /*
-        DOM Manipulation
-        .hide() => menghilangkan sesuatu display = node << masih terlihat di element browser
-        .show() => menampilkan kebalikan hide
-        .val() => untuk mengambil value dari tag input
-        .append() => push sesuatu dalam tag html
-        featuring 
-        .empty() => remove namun lebih dari hide
-        VS
-        .html() => untuk replace
-  
-        EVENT HANDLER
-        - click
-        - submit
-        */
-
-        // kita bisa menuliskan javascript seperti biasa
-
-        // CONTOH PENGGUNAAN JQuery
-        // $("h1").hide(); // hide semua h1
-        $("#contoh1").hide(); // spesifik hide id contoh1
-        $(".contoh2").hide(); // spesifik hide class contoh2
-
-        $("#button-example").click(() => {
-          // console.log("aku terklik kawan");
-          $("#contoh1").show();
-        });
-
-        $("#button-2").click(() => {
-          const text = $("#contoh-input").val();
-          console.log(text);
-        });
-
-        $("#button-3").click(() => {
-          $(".content").empty();
-          $(".content").append("<p><b>push sesuatu dengan append</b></p>");
-        });
-
-        $("#button-4").click(() => {
-          $(".content").html("<p><b>replace dengan sesuatu</b></p>");
-        });
-      });
-    </script>
+    <script src="scriptjQueryAjax.js"></script>
   </body>
 </html>
