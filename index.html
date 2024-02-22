@@ -24,6 +24,13 @@
     >
       SUBMIT ABAL-ABAL
     </div>
+    <br />
+
+    <div class="content"></div>
+    <br />
+    <button id="button-3">button append</button>
+
+    <button id="button-4">button replace</button>
 
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -37,9 +44,11 @@
       .hide() => menghilangkan sesuatu display = node << masih terlihat di element browser
       .show() => menampilkan kebalikan hide
       .val() => untuk mengambil value dari tag input
-      .append() featuring .empty()
+      .append() => push sesuatu dalam tag html
+      featuring 
+      .empty() => remove namun lebih dari hide
       VS
-      .html()
+      .html() => untuk replace
 
       EVENT HANDLER
       - click
@@ -61,6 +70,15 @@
       $("#button-2").click(() => {
         const text = $("#contoh-input").val();
         console.log(text);
+      });
+
+      $("#button-3").click(() => {
+        $(".content").empty();
+        $(".content").append("<p><b>push sesuatu dengan append</b></p>");
+      });
+
+      $("#button-4").click(() => {
+        $(".content").html("<p><b>replace dengan sesuatu</b></p>");
       });
     </script>
   </body>
