@@ -6,7 +6,10 @@
     <title>Learn JQuery</title>
   </head>
   <body>
-    <h1>Practice JQuery</h1>
+    <h1 id="contoh1">satu</h1>
+    <h1 class="contoh2">dua</h1>
+    <button id="button-example">klik aku</button>
+
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
       integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
@@ -17,17 +20,28 @@
       /*
       DOM Manipulation
       .hide() => menghilangkan sesuatu display = node << masih terlihat di element browser
-      .show()
+      .show() => menampilkan kebalikan hide
       .val()
       .append() featuring .empty()
       VS
       .html()
+
+      EVENT HANDLER
+      - click
+      - submit
       */
 
       // kita bisa menuliskan javascript seperti biasa
 
       // CONTOH PENGGUNAAN JQuery
-      $("h1").hide();
+      // $("h1").hide(); // hide semua h1
+      $("#contoh1").hide(); // spesifik hide id contoh1
+      $(".contoh2").hide(); // spesifik hide class contoh2
+
+      $("#button-example").click(() => {
+        // console.log("aku terklik kawan");
+        $("#contoh1").show();
+      });
     </script>
   </body>
 </html>
