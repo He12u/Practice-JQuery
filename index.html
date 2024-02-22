@@ -9,6 +9,21 @@
     <h1 id="contoh1">satu</h1>
     <h1 class="contoh2">dua</h1>
     <button id="button-example">klik aku</button>
+    <br />
+    <br />
+    <input id="contoh-input" type="text" />
+    <div
+      id="button-2"
+      style="
+        background-color: blue;
+        width: fit-content;
+        color: white;
+        border: 1px solid black;
+        margin-top: 10px;
+      "
+    >
+      SUBMIT ABAL-ABAL
+    </div>
 
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -21,7 +36,7 @@
       DOM Manipulation
       .hide() => menghilangkan sesuatu display = node << masih terlihat di element browser
       .show() => menampilkan kebalikan hide
-      .val()
+      .val() => untuk mengambil value dari tag input
       .append() featuring .empty()
       VS
       .html()
@@ -41,6 +56,11 @@
       $("#button-example").click(() => {
         // console.log("aku terklik kawan");
         $("#contoh1").show();
+      });
+
+      $("#button-2").click(() => {
+        const text = $("#contoh-input").val();
+        console.log(text);
       });
     </script>
   </body>
