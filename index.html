@@ -39,46 +39,49 @@
     ></script>
 
     <script>
-      /*
-      DOM Manipulation
-      .hide() => menghilangkan sesuatu display = node << masih terlihat di element browser
-      .show() => menampilkan kebalikan hide
-      .val() => untuk mengambil value dari tag input
-      .append() => push sesuatu dalam tag html
-      featuring 
-      .empty() => remove namun lebih dari hide
-      VS
-      .html() => untuk replace
+      //! SAFETY MANIPULATION
+      $(document).ready(() => {
+        /*
+        DOM Manipulation
+        .hide() => menghilangkan sesuatu display = node << masih terlihat di element browser
+        .show() => menampilkan kebalikan hide
+        .val() => untuk mengambil value dari tag input
+        .append() => push sesuatu dalam tag html
+        featuring 
+        .empty() => remove namun lebih dari hide
+        VS
+        .html() => untuk replace
+  
+        EVENT HANDLER
+        - click
+        - submit
+        */
 
-      EVENT HANDLER
-      - click
-      - submit
-      */
+        // kita bisa menuliskan javascript seperti biasa
 
-      // kita bisa menuliskan javascript seperti biasa
+        // CONTOH PENGGUNAAN JQuery
+        // $("h1").hide(); // hide semua h1
+        $("#contoh1").hide(); // spesifik hide id contoh1
+        $(".contoh2").hide(); // spesifik hide class contoh2
 
-      // CONTOH PENGGUNAAN JQuery
-      // $("h1").hide(); // hide semua h1
-      $("#contoh1").hide(); // spesifik hide id contoh1
-      $(".contoh2").hide(); // spesifik hide class contoh2
+        $("#button-example").click(() => {
+          // console.log("aku terklik kawan");
+          $("#contoh1").show();
+        });
 
-      $("#button-example").click(() => {
-        // console.log("aku terklik kawan");
-        $("#contoh1").show();
-      });
+        $("#button-2").click(() => {
+          const text = $("#contoh-input").val();
+          console.log(text);
+        });
 
-      $("#button-2").click(() => {
-        const text = $("#contoh-input").val();
-        console.log(text);
-      });
+        $("#button-3").click(() => {
+          $(".content").empty();
+          $(".content").append("<p><b>push sesuatu dengan append</b></p>");
+        });
 
-      $("#button-3").click(() => {
-        $(".content").empty();
-        $(".content").append("<p><b>push sesuatu dengan append</b></p>");
-      });
-
-      $("#button-4").click(() => {
-        $(".content").html("<p><b>replace dengan sesuatu</b></p>");
+        $("#button-4").click(() => {
+          $(".content").html("<p><b>replace dengan sesuatu</b></p>");
+        });
       });
     </script>
   </body>
